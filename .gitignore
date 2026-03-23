@@ -1,0 +1,20 @@
+# Rust/cargo
+/target/
+**/*.rs.bk
+**/*.swp
+Cargo.lock
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# node modules (if applicable)
+node_modules/
+
