@@ -4,8 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+argon2 = { version = "0.5.3", features = ["password-hash", "rand"] }
 axum = "0.8.8"
 mongodb = "3.5.2"
+rand = "0.8.5"
 serde = { version = "1.0", features = ["derive"] }
 tokio = { version = "1.50.0", features = ["full"] }
 tower-http = "0.6.8"

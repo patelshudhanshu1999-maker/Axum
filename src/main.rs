@@ -1,6 +1,7 @@
 pub mod database;
 pub mod handlers;
 pub mod models;
+pub mod utils;
 
 use axum::{
     Extension, Router,
@@ -21,6 +22,7 @@ async fn main() {
     let app = Router::new()
         .route("/hello", get(handlers::auth::hello))
         .route("/register", post(handlers::auth::register))
+        .route("/login", post(handlers::auth::login))
         .layer(Extension(client));
 
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();

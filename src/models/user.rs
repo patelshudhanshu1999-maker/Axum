@@ -16,6 +16,7 @@ pub struct RegisterUser {
     pub name: String,
     pub email: String,
     pub password: String,
+    pub age: Option<u8>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -24,3 +25,8 @@ pub struct RegisterResponse {
     pub id: mongodb::bson::oid::ObjectId,
 }
 
+#[derive(Debug, Serialize, Deserialize)]
+pub struct LoginUser {
+    pub email: String,
+    pub password: String,
+}
